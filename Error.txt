@@ -1,0 +1,8 @@
+LOAD R0, B ;Test comment
+LOAD R1, C
+ADD R4, R0, R1
+ADDr R4, R0, R1
+INC R5
+BEQ R5, R3, END
+BR HALT
+HALT:    END

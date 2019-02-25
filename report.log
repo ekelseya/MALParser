@@ -1,0 +1,169 @@
+MAL Parser Report 
+Source File: report.mal
+Report File: report.log
+07:20PM on February 24, 2019
+Eryn Kelsey-Adkins
+CS 3210
+
+-------------------------
+
+Original MAL program listing:
+
+1	;; start corrected code
+2	
+3	;; program for calculating a * (b + c)
+4	
+5	               LOAD R0, B ;Test comment
+6	
+7	; load the value at memory location B to register R0
+8	
+9	               LOAD R1, C
+10	
+11	; load the value at memory location C to register R1
+12	
+13	               LOAD R3, A
+14	
+15	; load the value at memory location A to register R3
+16	
+17	               ADD R4, R0, R1
+18	
+19	; add B and C and store in register R4
+20	
+21	               LOADI R5, 0
+22	
+23	; load the value 0 to register R5 for a counter
+24	
+25	               BEQ R5, R3, ZERO
+26	
+27	;check if A equals 0, branch to ZERO if true
+28	
+29	               INC R5
+30	
+31	               BEQ R5, R3, END
+32	
+33	; check if A equals 1, branch to END if true
+34	
+35	               INC R5
+36	
+37	               ADD R7, R4, R4
+38	
+39	; multiplies b + c by 2, stores in register R7 and increases counter by 1
+40	
+41	MULTI:  BEQ R5, R3, END
+42	
+43	     INC R5
+44	
+45	     ADD R7, R7, R4
+46	
+47	     BR MULTI
+48	
+49	; loops through multi until the counter equals A (adding the value of b+c to itself A times)
+50	
+51	END:      STORE R7, Y
+52	
+53	               BR HALT
+54	
+55	; store the calculated value in location Y and branches to end of program
+56	
+57	ZERO:    LOADI R6, 0
+58	
+59	               BR HALT
+60	
+61	; if A equals zero, load 0 to register R6 and branch to end of program
+62	
+63	HALT:    END
+64	
+65	; trying to get more numbers
+66	
+67	;
+68	
+69	;
+70	
+71	;
+72	
+73	;
+74	
+75	;
+76	
+77	;
+78	
+79	;
+80	
+81	;
+82	
+83	;
+84	
+85	;
+86	
+87	;
+88	
+89	;
+90	
+91	;
+92	
+93	;
+94	
+95	;
+96	
+97	;
+98	
+99	;
+100	
+101	;
+102	
+103	;
+104	
+105	;
+106	
+107	;
+108	
+109	;
+110	
+111	;
+112	
+113	;
+114	
+115	;
+116	
+117	;
+118	
+119	;
+120	
+121	;
+122	
+123	;
+124	
+125	;
+
+
+-------------------------
+
+Stripped MAL program listing:
+
+5 LOAD R0, B 
+9 LOAD R1, C 
+13 LOAD R3, A 
+17 ADD R4, R0, R1 
+21 LOADI R5, 0 
+25 BEQ R5, R3, ZERO 
+29 INC R5 
+31 BEQ R5, R3, END 
+35 INC R5 
+37 ADD R7, R4, R4 
+41 MULTI: BEQ R5, R3, END 
+43 INC R5 
+45 ADD R7, R7, R4 
+47 BR MULTI 
+51 END: STORE R7, Y 
+53 BR HALT 
+57 ZERO: LOADI R6, 0 
+59 BR HALT 
+63 HALT: END 
+
+
+-------------------------
+
+Error report listing:
+
+Error line 31: END: Expected Label 
+Error line 41: END: Expected Label 

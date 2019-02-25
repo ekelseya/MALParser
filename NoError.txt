@@ -1,0 +1,125 @@
+;; start corrected code
+
+;; program for calculating a * (b + c)
+
+               LOAD R0, B ;Test comment
+
+; load the value at memory location B to register R0
+
+               LOAD R1, C
+
+; load the value at memory location C to register R1
+
+               LOAD R3, A
+
+; load the value at memory location A to register R3
+
+               ADD R4, R0, R1
+
+; add B and C and store in register R4
+
+               LOADI R5, 0
+
+; load the value 0 to register R5 for a counter
+
+               BEQ R5, R3, ZERO
+
+;check if A equals 0, branch to ZERO if true
+
+               INC R5
+
+               BEQ R5, R3, END
+
+; check if A equals 1, branch to END if true
+
+               INC R5
+
+               ADD R7, R4, R4
+
+; multiplies b + c by 2, stores in register R7 and increases counter by 1
+
+MULTI:  BEQ R5, R3, END
+
+     INC R5
+
+     ADD R7, R7, R4
+
+     BR MULTI
+
+; loops through multi until the counter equals A (adding the value of b+c to itself A times)
+
+END:      STORE R7, Y
+
+               BR HALT
+
+; store the calculated value in location Y and branches to end of program
+
+ZERO:    LOADI R6, 0
+
+               BR HALT
+
+; if A equals zero, load 0 to register R6 and branch to end of program
+
+HALT:    END
+
+; trying to get more numbers
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;
+
+;

@@ -1,0 +1,11 @@
+Test file
+
+; comment
+
+line; comment after line
+
+line
+
+;comment
+
+last line
